@@ -276,6 +276,24 @@ p { margin: 0; }
   overflow: hidden;
 }
 
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/puro-matrix-hero.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  opacity: 0.5;
+  filter: brightness(0.75) contrast(1.05) saturate(0.8);
+  z-index: -2;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 46%, rgba(10, 11, 15, 0.5) 68%, rgba(10, 11, 15, 0.68) 88%, var(--bg) 99%);
+  z-index: -1;
+}
+
 .hero__field {
   position: absolute;
   inset: 0;
