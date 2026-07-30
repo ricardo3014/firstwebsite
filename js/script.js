@@ -77,35 +77,6 @@
     });
   });
 
-  /* ---------- Countdown ----------
-     Placeholder target date — update once real dates are confirmed. */
-  const countdown = document.getElementById("countdown");
-  const targetDate = new Date("2026-10-14T09:00:00");
-
-  const pad = (n) => String(n).padStart(2, "0");
-
-  const updateCountdown = () => {
-    const diff = targetDate.getTime() - Date.now();
-    if (diff <= 0) {
-      countdown.querySelector("[data-days]").textContent = "0";
-      countdown.querySelector("[data-hours]").textContent = "00";
-      countdown.querySelector("[data-mins]").textContent = "00";
-      countdown.querySelector("[data-secs]").textContent = "00";
-      return;
-    }
-    const days = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-
-    countdown.querySelector("[data-days]").textContent = days;
-    countdown.querySelector("[data-hours]").textContent = pad(hours);
-    countdown.querySelector("[data-mins]").textContent = pad(mins);
-    countdown.querySelector("[data-secs]").textContent = pad(secs);
-  };
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
   /* ---------- Newsletter form (demo only, no backend) ---------- */
   const newsletterForm = document.getElementById("newsletterForm");
   const newsletterNote = document.getElementById("newsletterNote");
